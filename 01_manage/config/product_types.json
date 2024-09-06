@@ -1,0 +1,23 @@
+[
+    {
+      "id": "whey",
+      "label": "Whey"
+    },
+    {
+      "id": "isolate_whey",
+      "label": "Isolate Whey"
+    },
+    {
+      "id": "casein",
+      "label": "Casein"
+    },
+    {
+      "id": "creatine",
+      "label": "Creatine"
+    },
+    {
+      "id": "vegan_protein",
+      "label": "Vegan Protein"
+    }
+  ]
+  

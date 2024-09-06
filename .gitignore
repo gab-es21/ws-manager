@@ -1,0 +1,33 @@
+# Ignore the virtual environment folder
+env-ws-manager/
+
+#Credentials
+cred/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore Django migration files
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+
+# Ignore environment variable files
+*.env
+
+# Ignore IDE and editor-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+.tox/
