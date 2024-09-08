@@ -50,8 +50,8 @@ def init_webdriver(browser='chrome', width=1920, height=1080, headless=False):
 
 # Dictionary mapping brand ID to corresponding search function
 search_functions = {
-    #"Prozis": search_prozis,
-    #"MyProtein": search_myprotein,
+    "Prozis": search_prozis,
+    "MyProtein": search_myprotein,
     "Zumub": search_zumub,
 }
 
