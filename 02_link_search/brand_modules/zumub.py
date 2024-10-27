@@ -67,25 +67,25 @@ def extract_item_links(driver):
     try:
         # Locate the product listing container
         product_listing = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.ID, 'productsListing'))
+            EC.presence_of_element_located((By.CLASS_NAME, 'list-product-75'))
         )
 
         # Find all product items within the listing
-        items = product_listing.find_elements(By.CLASS_NAME, 'col-lg-3')
+        items = product_listing.find_elements(By.CSS_SELECTOR, '.product-detail')
 
         logging.info(f"Found {len(items)} items on the page.")
 
         for item in items:
             try:
                 # Find the link element within the product item
-                link_element = item.find_element(By.CSS_SELECTOR, '.intro.text-center a')
+                link_element = item.find_element(By.CSS_SELECTOR, '.product-detail a')
                 href = link_element.get_attribute('href')
                 product_id = href.split("/")[-1]  # Extract the unique part of the link
                 
                 links.append({"id": product_id, "link": href})
 
                 # Improved logging for each product
-                product_name = item.find_element(By.CSS_SELECTOR, '.intro a').text  # Extracting product name
+                product_name = item.find_element(By.CSS_SELECTOR, '.product-detail p').text  # Extracting product name
                 logging.info(f"Product found: {product_name}, Link: {href}")
                 print(f"Detected product: {product_name}, Link: {href}")  # Print each detected product for immediate feedback
 
